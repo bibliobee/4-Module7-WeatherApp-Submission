@@ -11,8 +11,9 @@
   padding: 20px;
 }
 
-.temperature {
+.weather-forecast-temperature {
   font-size: 36px;
+  opacity: 0.3;
 }
 
 .weather-app-wrapper {
@@ -23,7 +24,11 @@
   padding: 20px;
   border-radius: 10px;
 }
-
+.weather-forecast-date {
+  font-size: 16px;
+  color: rgb(135, 135, 135);
+  opacity: 0.3;
+}
 body {
   font-family: "Times New Roman", Times, serif;
   font-size: 24px;

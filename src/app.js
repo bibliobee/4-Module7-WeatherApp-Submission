@@ -24,10 +24,11 @@ function displayDate() {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "";
+  let days = ["Thu", "Fri", "Sat", "Sun",];
 
+  let forecastHTML = <div class="row">;;
+days.forEach(function (day) {
   forecastHTML = `
-  <div class="row">
             <div class="col-xl-6">
               <div class="icon">
                 <img
@@ -35,15 +36,21 @@ function displayForecast() {
                   alt="Clear"
                 />
                 </div>
-             <div class="temperature"></div>
+             <div class="weather-forecast-temperature"></div>
                 12° <span class="celsius"><span class="celsius-link">C</span></span> | °<span class="fahrenheit"><span class="fahrenheit-link"><a href="">F</a></span></span>
-              </div>
+            </div>
             </div>`;
+});
+
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector(
+    "#weather-forecast-temperature"
+  );
   let precipitationElement = document.querySelector("#precipitation");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
@@ -103,3 +110,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+search("New Tork");
+displayForecast();

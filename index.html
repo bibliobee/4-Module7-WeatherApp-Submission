@@ -15,45 +15,48 @@
 
   <body>
     <div class="container">
-    <div class="weather-app-wrapper">
-      <div class="weather">
-       <form id="search-form" class="mb-3">
-        <div class="row">
-          <div class="col-9">
-
-        <input 
-        type="search" 
-        placeholder="search any city" 
-        id="city-input"
-        class="form-control"
-        autocomplete="off"
-        />
-        </div>
-        <div class="col-3"
-        id="btn btn-primary w-100">
-        
-        <input type="submit"
-        value="Search" />
-        </div>
-        </div>
-       </form>
-
-      <div class="overview">
-          <h1 id="city">New York</h1>
-          <ul>
-            <li>Friday 05:00</li>
-            <li id="description">Clear</li>
-          </ul>
-          <div class="row">
-            <div class="col-xl-6">
-              <div class="icon">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="Clear"
+      <div class="weather-app-wrapper">
+        <div class="weather">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="search any city"
+                  id="city-input"
+                  class="form-control"
+                  autocomplete="off"
                 />
+              </div>
+              <div class="col-3" id="btn btn-primary w-100">
+                <input type="submit" value="Search" />
+              </div>
+            </div>
+          </form>
+
+          <div class="overview">
+            <h1 id="city">New York</h1>
+            <ul>
+              <li>Friday 05:00</li>
+              <li id="description">Clear</li>
+            </ul>
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="icon">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="Clear"
+                  />
                 </div>
-             <div class="temperature"></div>
-                12° <span class="celsius"><span class="celsius-link">C</span></span> | °<span class="fahrenheit"><span class="fahrenheit-link"><a href="">F</a></span></span>
+                <div class="weather-forecast-temperature">
+                  12°
+                  <span class="celsius"
+                    ><span class="celsius-link">C</span></span
+                  >
+                  | °<span class="fahrenheit"
+                    ><span class="fahrenheit-link"><a href="">F</a></span></span
+                  >
+                </div>
               </div>
             </div>
             <div class="col-xl-6">
@@ -64,16 +67,23 @@
               </ul>
             </div>
           </div>
+          <div class="forecast">
+            <div class="row> <div class=col-2">
+              <div class="weather-forecast-date">Thu</div>
+            </div>
+          </div>
         </div>
+
+        <small
+          >This is an
+          <a
+            href="https://github.com/bibliobee/4-Module7-WeatherApp-Submission"
+            target="_blank"
+            >Open Source code</a
+          >
+          made by Abby Pelaez.</small
+        >
       </div>
-    
-    <small
-      >This is an
-      <a href="https://github.com/bibliobee/4-Module7-WeatherApp-Submission" target="_blank"
-        >Open Source code</a
-      >
-      made by Abby Pelaez.</small
-    ></div>
     </div>
     <script src="src/app.js"></script>
   </body>
